@@ -6,6 +6,12 @@
 High performance Stratum poolserver in Node.js. One instance of this software can startup and manage multiple coin
 pools, each with their own daemon and stratum port :)
 
+#### Getting started
+Edit the example `index.js` file to start your own Bitcoin mainnet mining pool. This configuration supports bech32
+addresses.
+
+Run with `node index.js`.
+
 #### Notice
 This is a module for Node.js that will do nothing on its own. Unless you're a Node.js developer who would like to
 handle stratum authentication and raw share data then this module will not be of use to you. For a full featured portal

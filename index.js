@@ -117,6 +117,12 @@ var pool = Stratum.createPool({
         },
         "3258": {
             "diff": 10
+        },
+        "3259": {
+            "diff": 0.1
+        },
+        "3260": {
+            "diff": 1500
         }
     },
 

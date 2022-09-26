@@ -59,6 +59,8 @@ var pool = Stratum.createPool({
 
     "blockRefreshInterval": 1000, //How often to poll RPC daemons for new blocks, in milliseconds
 
+    "updateWorkInterval": 2000, //How often to poll RPC daemons for new blocks, in milliseconds
+
 
     /* Some miner apps will consider the pool dead/offline if it doesn't receive anything new jobs
        for around a minute, so every time we broadcast jobs, set a timeout to rebroadcast
@@ -119,10 +121,10 @@ var pool = Stratum.createPool({
             "diff": 10
         },
         "3259": {
-            "diff": 0.1
+            "diff": 0.031348317861557007
         },
-        "3260": {
-            "diff": 1500
+        "3333": {
+            "diff": 3026
         }
     },
 
@@ -138,7 +140,7 @@ var pool = Stratum.createPool({
             "host": "127.0.0.1",
             "port": 1234,
             "user": "bitcoin",
-            "password": "KSDFuh7823rgisdufbiaywefba"
+            "password": "dirtyinsecurepassword"
         }
         /*,{   //Backup daemon instance
             "host": "127.0.0.1",
@@ -199,8 +201,8 @@ pool.on('share', function(isValidShare, isValidBlock, data){
 'logKey':   can be 'system' or 'client' indicating if the error
             was caused by our system or a stratum client
 */
-pool.on('log', function(severity, logKey, logText){
-    console.log(severity + ': ' + '[' + logKey + '] ' + logText);
+pool.on('log', function(severity, logText){
+    console.log(severity + ': '  + logText);
 });
 
 pool.start();

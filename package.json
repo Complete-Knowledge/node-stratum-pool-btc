@@ -29,10 +29,14 @@
     },
     "dependencies": {
         "async": "*",
-        "base58-native": "*",
-        "bignum": "^0.13.1",
+        "base58-native": "^0.1.4",
         "bitcoinjs-lib": "*",
-        "multi-hashing": "git://github.com/zone117x/node-multi-hashing.git"
+        "bn": "^1.0.5",
+        "dotenv": "^16.0.3",
+        "elliptic": "^6.5.4",
+        "multi-hashing": "git://github.com/zone117x/node-multi-hashing.git",
+        "sha3": "^2.1.4",
+        "web3": "^1.8.0"
     },
     "engines": {
         "node": ">=0.10"

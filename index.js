@@ -59,13 +59,13 @@ var pool = Stratum.createPool({
 
     "blockRefreshInterval": 1000, //How often to poll RPC daemons for new blocks, in milliseconds
 
-    "updateWorkInterval": 2000, //How often to poll RPC daemons for new blocks, in milliseconds
+    "updateWorkInterval": 1000, //How often to poll RPC daemons for new blocks, in milliseconds
 
 
     /* Some miner apps will consider the pool dead/offline if it doesn't receive anything new jobs
        for around a minute, so every time we broadcast jobs, set a timeout to rebroadcast
        in this many seconds unless we find a new job. Set to zero or remove to disable this. */
-    "jobRebroadcastTimeout": 55,
+    "jobRebroadcastTimeout": 100,
 
     //instanceId: 37, //Recommend not using this because a crypto-random one will be generated
 
@@ -191,7 +191,7 @@ pool.on('share', function(isValidShare, isValidBlock, data){
     else
         console.log('Invalid share submitted')
 
-    console.log('share data: ' + JSON.stringify(data));
+    console.log('['+Date.now()/1000 + '] share data: ' + JSON.stringify(data));
 });
 
 

@@ -180,19 +180,19 @@ var pool = Stratum.createPool({
     });
 });
 
-pool.on('share', function(isValidShare, isValidBlock, data){
+// pool.on('share', function(isValidShare, isValidBlock, data){
 
-    if (isValidBlock)
-        console.log('Block found');
-    else if (isValidShare)
-        console.log('Valid share submitted');
-    else if (data.blockHash)
-        console.log('We thought a block was found but it was rejected by the daemon');
-    else
-        console.log('Invalid share submitted')
+//     if (isValidBlock)
+//         console.log('Block found');
+//     else if (isValidShare)
+//         console.log('Valid share submitted');
+//     else if (data.blockHash)
+//         console.log('We thought a block was found but it was rejected by the daemon');
+//     else
+//         console.log('Invalid share submitted')
 
-    console.log('['+Date.now()/1000 + '] share data: ' + JSON.stringify(data));
-});
+//     console.log('['+Date.now()/1000 + '] share data: ' + JSON.stringify(data));
+// });
 
 
 
